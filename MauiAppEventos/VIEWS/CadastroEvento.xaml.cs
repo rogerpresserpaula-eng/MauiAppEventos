@@ -6,4 +6,17 @@ public partial class CadastroEvento : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+		try
+		{
+			Navigation.PushAsync(new ResumoEvento());
+
+        }
+		catch
+		{
+            DisplayAlert("Ops", "ERRO!", "OK");
+        }
+    }
 }

@@ -2,11 +2,147 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppEventos.VIEWS.CadastroEvento"
-             Title="CadastroEvento">
-    <VerticalStackLayout>
+             Title="CadastroEvento"
+             BackgroundColor="{StaticResource OffWhite}">
+    <VerticalStackLayout
+        Margin="10"
+        Padding="10"
+        VerticalOptions="CenterAndExpand"
+        HorizontalOptions="Center">
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            Text="CADASTRO DE EVENTOS"
+            TextColor="{StaticResource AzulNeon}"
+            FontSize="45"
+            FontFamily="Cause"
+            />
+        
+        <Frame Padding="10"
+               BackgroundColor="#EAEAEA"
+               BorderColor="#D6D6D6">
+            
+            <VerticalStackLayout>
+
+                <!--Nome do Evento-->
+                <Label Text="NOME DO EVENTO:"
+                       FontSize="20"
+                       TextColor="{StaticResource AzulNeon}"
+                       FontFamily="Cause"
+                       HorizontalOptions="Center"
+                       FontAttributes="Bold"/>
+
+                <Entry x:Name ="nome_evento" 
+                       BackgroundColor="White"
+                       HeightRequest="50"
+                       Margin="10"
+                       TextColor="Black"
+                       Placeholder="ex: Conferência Tech"/>
+
+                <!--Local do Evento-->
+                <Label Text="LOCAL DO EVENTO:"
+                       FontSize="20"
+                       TextColor="{StaticResource AzulNeon}"
+                       FontFamily="Cause"
+                       HorizontalOptions="Center"
+                       FontAttributes="Bold"/>
+
+                <Entry x:Name ="local_evento" 
+                       BackgroundColor="White"
+                       HeightRequest="50"
+                       Margin="10"
+                       TextColor="Black"
+                       Placeholder="Ex: Av. Central, 450"/>
+
+                <!--Custo por convidado-->
+                <Label Text="CUSTO POR CONVIDADO:"
+                       FontSize="20"
+                       TextColor="{StaticResource AzulNeon}"
+                       FontFamily="Cause"
+                       HorizontalOptions="Center"
+                       FontAttributes="Bold"/>
+
+                <Entry x:Name ="custo_convidado" 
+                       BackgroundColor="White"
+                       HeightRequest="50"
+                       Margin="10"
+                       TextColor="Black"
+                       HorizontalOptions="Center"
+                       Placeholder="R$"/>
+
+
+                <!--Quantidade de convidados-->
+                <Frame Padding="15" Margin="5" BackgroundColor="#EAEAEA">
+                    <VerticalStackLayout Spacing="15">
+
+                        <Label Text="QUANTIDADE DE CONVIDADOS"
+                               FontSize="20"
+                               TextColor="{StaticResource AzulNeon}"
+                               FontFamily="Cause"
+                               HorizontalOptions="Center"
+                               FontAttributes="Bold"/>
+
+                        <Label FontSize="20"
+                               TextColor="{StaticResource AzulNeon}"
+                               HorizontalOptions="Center"
+                               FontAttributes="Bold"
+                               Text="{Binding Value}" 
+                               BindingContext="{x:Reference qnt_convidados}"/>
+
+                        <Stepper x:Name="qnt_convidados"
+                                 BackgroundColor="{StaticResource AzulNeon}"
+                                 Minimum="2"
+                                 Maximum="200"
+                                 Increment="1"
+                                 HorizontalOptions="Center"/>
+                        
+                    </VerticalStackLayout>
+                </Frame>
+                
+                <!--Data de ínicio e de término-->
+                <Frame Padding="10" BackgroundColor="#EAEAEA">
+                    <StackLayout>
+                        <Label Text="DATAS:"
+                               FontSize="20"
+                               TextColor="{StaticResource AzulNeon}"
+                               FontFamily="Cause"
+                               HorizontalOptions="Center"
+                               FontAttributes="Bold"/>
+                        
+                        <Grid RowDefinitions="*"
+                              ColumnDefinitions="*, *">
+
+                            <!--início-->
+                            <HorizontalStackLayout Padding="10" Grid.Row="0" Grid.Column="0">
+                                <Label Text="Início: " 
+                                       TextColor="{StaticResource AzulNeon}"/>
+
+                                <DatePicker x:Name="dtpck_inicio"
+                                            Format="dd/MM/yyyy"
+                                            TextColor="{StaticResource AzulNeon}"
+                                            Margin="5"/>
+                            </HorizontalStackLayout>
+                            
+                            <!--final-->
+                            <HorizontalStackLayout Padding="10" Grid.Row="0" Grid.Column="1">
+                                <Label Text="Final: " 
+                                       TextColor="{StaticResource AzulNeon}"/>
+
+                                <DatePicker x:Name="dtpck_final"
+                                            Format="dd/MM/yyyy"
+                                            TextColor="{StaticResource AzulNeon}"
+                                            Margin="5"/>
+                            </HorizontalStackLayout>
+
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+                
+                <!--BOTÃO AVANÇAR-->
+                <Button Text="Avançar"
+                        HorizontalOptions="Center"
+                        Clicked="Button_Clicked"/>
+
+            </VerticalStackLayout>
+        </Frame>
+
     </VerticalStackLayout>
 </ContentPage>
