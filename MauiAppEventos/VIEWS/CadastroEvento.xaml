@@ -117,6 +117,7 @@
                                        TextColor="{StaticResource AzulNeon}"/>
 
                                 <DatePicker x:Name="dtpck_inicio"
+                                            DateSelected="dtpck_inicio_DateSelected"
                                             Format="dd/MM/yyyy"
                                             TextColor="{StaticResource AzulNeon}"
                                             Margin="5"/>
