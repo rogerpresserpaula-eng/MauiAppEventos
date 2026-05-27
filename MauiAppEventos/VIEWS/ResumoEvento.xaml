@@ -2,11 +2,135 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppEventos.VIEWS.ResumoEvento"
-             Title="ResumoEvento">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="ResumoEvento"
+             BackgroundColor="{StaticResource OffWhite}">
+
+    <VerticalStackLayout         
+        Margin="10"
+        Padding="10"
+        VerticalOptions="CenterAndExpand"
+        HorizontalOptions="Center">
+
+        <Label Text="RESUMO DO EVENTO"
+               TextColor="{StaticResource AzulNeon}"
+               FontSize="45"
+               FontFamily="Cause"
+               HorizontalOptions="Center"/>
+        
+        <Frame Padding="10"
+               Margin="5"
+               BackgroundColor="#EAEAEA"
+               BorderColor="#D6D6D6">
+            
+            <VerticalStackLayout>
+                
+                <!--AApresentação-->
+                <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto"
+                      ColumnDefinitions="Auto, *"
+                      RowSpacing="15"
+                      ColumnSpacing="10">
+
+                    <!--Nome-->
+                    <Label Text="Evento: "
+                           Grid.Row="0" Grid.Column="0"
+                           TextColor="{StaticResource AzulNeon}"
+                           FontSize="20"
+                           FontFamily="Cause"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"/>
+
+                    <Label Text="Reunião dos Tamanduas"
+                           Grid.Row="0" Grid.Column="1"
+                           TextColor="Black"
+                           FontSize="15"
+                           FontFamily="Cause"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"/>
+
+                    <!--Endereço-->
+                    <Label Text="Endereço: "
+                           Grid.Row="1" Grid.Column="0"
+                           TextColor="{StaticResource AzulNeon}"
+                           FontSize="20"
+                           FontFamily="Cause"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"/>
+
+                    <Label Text="Av. Central, 450"
+                           Grid.Row="1" Grid.Column="1"
+                           TextColor="Black"
+                           FontSize="15"
+                           FontFamily="Cause"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"/>
+
+                    <!--Quantidade de convidados-->
+                    <Label Text="Nº Convidados: "
+                           Grid.Row="2" Grid.Column="0"
+                           TextColor="{StaticResource AzulNeon}"
+                           FontSize="20"
+                           FontFamily="Cause"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"/>
+
+                    <Label Text="5"
+                           Grid.Row="2" Grid.Column="1"
+                           TextColor="Black"
+                           FontSize="15"
+                           FontFamily="Cause"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"/>
+
+                    <!--Dias do evento-->
+                    <Label Text="Duração (Dias) "
+                           Grid.Row="3" Grid.Column="0"
+                           TextColor="{StaticResource AzulNeon}"
+                           FontSize="20"
+                           FontFamily="Cause"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"/>
+
+                    <Label Text="8"
+                           Grid.Row="3" Grid.Column="1"
+                           TextColor="Black"
+                           FontSize="15"
+                           FontFamily="Cause"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"/>
+
+                    <!--Valor Total-->
+                    <Label Text="Valor Total: "
+                           Grid.Row="4" Grid.Column="0"
+                           TextColor="{StaticResource AzulNeon}"
+                           FontSize="20"
+                           FontFamily="Cause"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"/>
+
+                    <Label Text="2500"
+                           Grid.Row="4" Grid.Column="1"
+                           TextColor="Black"
+                           FontSize="15"
+                           FontFamily="Cause"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"/>
+
+                </Grid>
+
+            </VerticalStackLayout>
+        </Frame>
+
+
     </VerticalStackLayout>
+
 </ContentPage>

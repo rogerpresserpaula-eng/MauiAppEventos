@@ -4,6 +4,7 @@
              x:Class="MauiAppEventos.VIEWS.CadastroEvento"
              Title="CadastroEvento"
              BackgroundColor="{StaticResource OffWhite}">
+    
     <VerticalStackLayout
         Margin="10"
         Padding="10"
