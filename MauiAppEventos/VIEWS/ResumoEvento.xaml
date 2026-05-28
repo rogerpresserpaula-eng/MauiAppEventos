@@ -116,7 +116,7 @@
                            HorizontalOptions="Start"
                            VerticalOptions="Center"/>
 
-                    <Label Text="{Binding ValorTotal}"
+                    <Label Text="{Binding ValorTotal, StringFormat='{0:C}'}"
                            Grid.Row="4" Grid.Column="1"
                            TextColor="Black"
                            FontSize="15"
