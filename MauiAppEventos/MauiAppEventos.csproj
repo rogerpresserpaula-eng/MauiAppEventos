@@ -71,10 +71,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="MODELS\" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <MauiXaml Update="VIEWS\CadastroEvento.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

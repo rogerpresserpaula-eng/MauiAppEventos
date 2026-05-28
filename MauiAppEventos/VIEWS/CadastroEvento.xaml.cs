@@ -1,3 +1,5 @@
+using MauiAppEventos.MODELS;
+
 namespace MauiAppEventos.VIEWS;
 
 public partial class CadastroEvento : ContentPage
@@ -14,17 +16,36 @@ public partial class CadastroEvento : ContentPage
 
     }
 
-    private void Button_Clicked(object sender, EventArgs e)
+    private async void Button_Clicked(object sender, EventArgs e)
     {
-		try
-		{
-			Navigation.PushAsync(new ResumoEvento());
 
+        try
+        {
+            Evento evento = new Evento
+            {
+                NomeEvento = nome_evento.Text,
+
+                LocalEvento = local_evento.Text,
+
+                NumeroParticipantes = Convert.ToInt32(qnt_convidados.Value),
+
+                DataInicio = dtpck_inicio.Date.Value,
+
+                DataFinal = dtpck_final.Date.Value,
+
+                CustoPorParticipante = Convert.ToDouble(custo_convidado.Text)
+            };
+
+            await Navigation.PushAsync(new ResumoEvento()
+            {
+                BindingContext = evento
+            });
         }
-		catch
-		{
-            DisplayAlert("Ops", "ERRO!", "OK");
+        catch (Exception ex)
+        {
+            await DisplayAlert("Ops", ex.Message, "OK");
         }
+
     }
     private void dtpck_inicio_DateSelected(object sender, DateChangedEventArgs e)
     {

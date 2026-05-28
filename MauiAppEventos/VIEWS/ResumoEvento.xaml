@@ -24,7 +24,7 @@
             
             <VerticalStackLayout>
                 
-                <!--AApresentação-->
+                <!--Apresentação-->
                 <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto"
                       ColumnDefinitions="Auto, *"
                       RowSpacing="15"
@@ -40,7 +40,7 @@
                            HorizontalOptions="Start"
                            VerticalOptions="Center"/>
 
-                    <Label Text="Reunião dos Tamanduas"
+                    <Label Text="{Binding NomeEvento}"
                            Grid.Row="0" Grid.Column="1"
                            TextColor="Black"
                            FontSize="15"
@@ -59,7 +59,7 @@
                            HorizontalOptions="Start"
                            VerticalOptions="Center"/>
 
-                    <Label Text="Av. Central, 450"
+                    <Label Text="{Binding LocalEvento}"
                            Grid.Row="1" Grid.Column="1"
                            TextColor="Black"
                            FontSize="15"
@@ -78,7 +78,7 @@
                            HorizontalOptions="Start"
                            VerticalOptions="Center"/>
 
-                    <Label Text="5"
+                    <Label Text="{Binding NumeroParticipantes}"
                            Grid.Row="2" Grid.Column="1"
                            TextColor="Black"
                            FontSize="15"
@@ -97,7 +97,7 @@
                            HorizontalOptions="Start"
                            VerticalOptions="Center"/>
 
-                    <Label Text="8"
+                    <Label Text="{Binding TotalDias}"
                            Grid.Row="3" Grid.Column="1"
                            TextColor="Black"
                            FontSize="15"
@@ -116,7 +116,7 @@
                            HorizontalOptions="Start"
                            VerticalOptions="Center"/>
 
-                    <Label Text="2500"
+                    <Label Text="{Binding ValorTotal}"
                            Grid.Row="4" Grid.Column="1"
                            TextColor="Black"
                            FontSize="15"
